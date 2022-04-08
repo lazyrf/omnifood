@@ -29,13 +29,16 @@
  * - Tints:
  * #fdf2e9
  * #fae5d3
+ * #eb984e
  *
  * - Shades:
  * #cf711f
+ * #45260a
  *
  * - Accents:
  *
  * - Greys:
+ * #aaa
  * #6f6f6f (lightest grey allowd on #fdf2e9)
  * #555
  * #333
@@ -43,6 +46,7 @@
  *
  * -----------------------------------------------------------
  * [05 Shadows]
+ * box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
  *
  *
  * -----------------------------------------------------------
@@ -156,6 +160,7 @@ body {
     letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -164,6 +169,11 @@ body {
     font-weight: 600;
     padding: 1.6rem 3.2rem;
     border-radius: 9px;
+
+    /* Only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 
     /* !!IMPORTANT: Put transition on original state */
     /* Animation on background-color, 1s: transition time */
@@ -203,6 +213,18 @@ body {
 .btn:active {
 }
 
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: #555;
+}
+
 .link:link,
 .link:visited {
     display: inline-block;
@@ -237,6 +259,13 @@ body {
     width: 3rem;
     height: 3rem;
     color: #e67e22;
+}
+
+*:focus {
+    outline: none;
+    /* outline: 4px dotted #e67e22; */
+    /* outline-offset: 8px; */
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* Helper class */
